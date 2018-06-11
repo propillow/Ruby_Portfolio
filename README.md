@@ -5,20 +5,22 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
+* Ruby version 
+2.4.4
 
 * Configuration
 
-* Database creation
+add
 
-* Database initialization
+'''config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'gmail.com',
+  user_name:            '<user_name>',
+  password:             '<password>'
+  authentication:       'plain',
+  enable_starttls_auto: true }
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  config.action_mailer.default_url_options = {host: "localhost: 3000"}'''

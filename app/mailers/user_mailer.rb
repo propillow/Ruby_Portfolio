@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
   def send_mail
     @greeting = "Hi"
 
-    mail to: "to@example.org"
+    mail to: "wilsonshum96@hotmail.com"
   end
 end

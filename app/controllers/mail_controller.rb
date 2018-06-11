@@ -11,22 +11,8 @@ class MailController < ApplicationController
         render plain: params[:mail].inspect
         puts :mail
 
-        newMail = Mail.new do
-            to      'wilsonshum96@hotmail.com'
-            subject 'This is a test email'
-            body    'hi'
-          end
+       UserMailer.send_mail().deliver_now
 
-          newMail.to_s =~ /Message\-ID: <[\d\w_]+@.+.mail/ #=> 27
-
-          newMail.deliver!
-
-        # Mail.deliver do
-        #     from     'me@test.lindsaar.net'
-        #     to       'wilsonshum96@hotmail.com'
-        #     subject  'Here is the image you wanted'
-        #     body     'body'
-        #   end
     end
 
 

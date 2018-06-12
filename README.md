@@ -15,9 +15,9 @@ Things you may want to cover:
 
 * Configuration
 
-add
+add to the development.rb
 
-'''config.action_mailer.raise_delivery_errors = true
+```config.action_mailer.raise_delivery_errors = true
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
@@ -28,4 +28,5 @@ config.action_mailer.smtp_settings = {
   authentication:       'plain',
   enable_starttls_auto: true }
 
-  config.action_mailer.default_url_options = {host: "localhost: 3000"}'''
+  config.action_mailer.default_url_options = {host: "localhost: 3000"}
+

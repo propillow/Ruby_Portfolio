@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'mail'
-
 class MailController < ApplicationController
     protect_from_forgery with: :null_session
 
@@ -8,10 +5,12 @@ class MailController < ApplicationController
     end
 
     def create
-        render plain: params[:mail].inspect
-        puts :mail
 
-       UserMailer.send_mail().deliver_now
+        name = params['name']
+        email = params['email']
+        message = params['message']
+
+       UserMailer.send_mail(name,email,message).deliver_now
 
     end
 

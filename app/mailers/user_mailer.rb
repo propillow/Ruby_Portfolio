@@ -5,9 +5,13 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.send_mail.subject
   #
-  def send_mail
-    @greeting = "Hi"
+  def send_mail(name,email,message)
+    @greeting = 'hi'
 
-    mail to: "wilsonshum96@hotmail.com"
+    url  = 'wilsonshum96@hotmail.com'
+    @message = message 
+
+    mail to: url, subject: name + " - " + email + " - " + message
+
   end
 end
